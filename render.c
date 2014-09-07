@@ -37,7 +37,7 @@ typedef struct render_com
 GLuint render_build_vertex_shader( void )
 {
 	static char * vertex_shader_source[] = {
-		"#version 430 core\n"
+		"#version 350 core\n"
 		"struct Box\n"
 		"{\n"
 		"	vec4 off;\n"
@@ -93,7 +93,7 @@ GLuint render_build_vertex_shader( void )
 GLuint render_build_fragment_shader( void )
 {
 	static char * fragment_shader_source[] = {
-		"#version 430 core\n"
+		"#version 350 core\n"
 		"out vec4 color;\n"
 		"void main(void)\n"
 		"{\n"
