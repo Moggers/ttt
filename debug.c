@@ -17,8 +17,9 @@ void render_check_gl_error( char * a )
 void render_check_glsl_error( char * a, GLuint shader )
 {
 #ifdef DEBUG
-	GLenum b = glGetError();
-	if( b == GL_NO_ERROR )
+	int b;
+	glGetShaderiv( shader, GL_COMPILE_STATUS, &b );
+	if( b == 1 )
 		fprintf( stdout, "Finished %s\n", a );
 	else
 	{
